@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Login Page</title>
+</head>
+<body>
+        
+    <div class="login-container">
+        <div class="login-box" id="loginBox">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="return false">
+
+                <div class="input-box">
+                <input type="text" placeholder="USERNAME" id="username" required>
+                <ion-icon name="person-circle-outline"></ion-icon>
+                </div>
+                <div class="input-box">
+                <input  type="password" placeholder="PASSWORD" id="password" required>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                </div>
+                <button type="submit" onclick="login()">Login</button>
+            </form>
+            <p id="error-message"></p>
+            <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+        </div>
+
+        <div class="signup-box" id="signupBox">
+            <h2>Sign Up</h2>
+            <form id="signupForm" onsubmit="return false">
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" required>
+
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" required>
+
+                <button type="submit" onclick="signup()">Sign Up</button>
+            </form>
+            <p id="signup-error-message"></p>
+            <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
